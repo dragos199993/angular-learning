@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-button [matMenuTriggerFor]="menu" matRipple matRippleCentered="true">Menu</button>
+        <mat-menu #menu="matMenu">
+          <button routerLink="/" mat-menu-item>Home</button>
+          <button routerLink="/tasks" mat-menu-item>Tasks</button>
+        </mat-menu>
+
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+  <!-- <app-board></app-board> -->
+</div>

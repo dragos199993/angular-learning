@@ -1,0 +1,10 @@
+<div id="search-component">
+  <mat-form-field class="example-full-width" style="padding: 50px 0;">
+    <input #searchBox (keyup)="search(searchBox.value)" matInput placeholder="Search input">
+  </mat-form-field>
+  <mat-list>
+    <mat-list-item style="cursor: pointer;" *ngFor="let task of tasks$ | async" routerLink="/task/{{ task.id}}">
+        {{ task.content }}
+    </mat-list-item>
+  </mat-list>
+</div>

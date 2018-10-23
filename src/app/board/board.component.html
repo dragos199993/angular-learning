@@ -1,0 +1,5 @@
+<div *ngIf="boardService.messages.length">
+  <h2>Tasks</h2>
+  <button (click)="boardService.clear()">Clear</button>
+  <div *ngFor="let message of boardService.messages"> {{ message }}</div>
+</div>
